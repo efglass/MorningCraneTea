@@ -1,0 +1,29 @@
+%btn-circle-default {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 10rem;
+   height: 10rem;
+   border: 4px solid rgba($color-black, 0.2);
+   border-radius: 50%;
+   content: '';
+   opacity: 0;
+   transition: transform 0.3s, opacity 0.3s;
+   transform: translateX(-50%) translateY(-50%) scale(0.01);
+}
+
+%btn-circle-hover-focus {
+   opacity: 1;
+   transform: translateX(-50%) translateY(-50%) scale(.6);
+}
+
+%bracket-slide-default {
+   display: inline-block;
+   opacity: 0;
+   transition: transform 0.3s, opacity 0.2s;
+}
+
+%bracket-slide-hover-focus {
+   opacity: 1;
+   transform: translateX(0px);
+}

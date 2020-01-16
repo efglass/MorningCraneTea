@@ -1,0 +1,206 @@
+//
+// Category WITH sub-Categories
+//
+.woocommerce.post-type-archive {
+   // Category page title
+   h1.page-title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      text-decoration: underline;
+      text-align: center;
+   }
+
+   // category ul list
+   /*&.tax-product_cat*/
+   ul.products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      // category list items
+      li.product-category.product {
+
+         img {
+            transition: all 0.5s;
+         }
+
+         // category hover
+         &:hover img,
+         &:focus img{
+            transform: scale(1.1);
+         }
+      }
+   }
+}
+
+
+// Title of loop category items
+.woocommerce-loop-category__title {
+   color: $color-black;
+   font-size: 1.8rem;
+   font-weight: 900;
+
+   mark.count {
+      display: none;
+   }
+}
+
+//
+// Category WITH products
+//
+
+// Title Product Page
+.archive.tax-product_cat {
+   h1.page-title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      text-decoration: underline;
+      text-align: center;
+   }
+}
+
+// product ul list
+.woocommerce.tax-product_cat ul.products {
+   position: relative;
+   top: -88px;
+   margin-top: 150px;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+
+   // loop product list items
+   li.product {
+      text-align: center;
+
+      // loop product transition for hover
+      .woocommerce-loop-product__link {
+         transition: all .5s;
+
+         //hide availability date
+         .availability_date{
+            display: none;
+         }
+
+         // loop product hover
+         &:hover img,
+         &:focus img {
+            transform: scale(1.1);
+         }
+
+         // loop product img
+         img {
+            margin-bottom: 0;
+            position: relative;
+            top: 88.5px;
+            transition: all .3s;
+         }
+
+         // loop product title
+         h2.woocommerce-loop-product__title {
+            font-size: 2.5rem;
+            color: $color-white;
+            font-weight: 400;
+            text-space: 2px;
+            padding-bottom: 1.5rem;
+            position: absolute;
+         }
+
+         // loop product price container
+         span.price {
+            padding-bottom: 1.25rem;
+            width: 90%;
+
+            // loop product price
+            span.woocommerce-Price-amount.amount {
+               color: $color-white;
+               font-size: 1.6rem;
+               font-weight: 600;
+            }
+         }
+
+         // loop product title & price background
+         h2.woocommerce-loop-product__title,
+         span.price {
+            @include center-horz;
+            width: 90%;
+            background-color: rgba($color-black, .5);
+         }
+
+      }
+   }
+}
+
+
+@include maxpoint(phone) {
+   // category & single product phone
+   .woocommerce.archive {
+      ul.products {
+         margin-top: 10rem;
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+
+         li.product {
+         }
+      }
+   }
+}
+
+// remove number of items
+p.woocommerce-result-count {
+   display: none;
+}
+
+form.woocommerce-ordering {
+
+}
+
+@include maxpoint(phone) {
+
+   // remove filter products by
+   form.woocommerce-ordering {
+      display: none;
+   }
+
+   // phone loop product ul list
+   .woocommerce ul.products {
+      margin-top: 0;
+
+      // phone loop product image
+      &[class*='columns-'] li.product {
+         img {
+            transform: translateY(-90px);
+         }
+      }
+
+      // phone loop product
+      li.product {
+         margin: 0 !important;
+         padding: 40px 0 0 !important;
+
+      }
+   }
+}
+
+
+// text from plugin 'CategoryTinyMCE'
+@include minpoint(desktop) {
+   .archive.tax-product_cat div.term-description {
+      padding: 0 15%;
+   }
+}
+
+.archive.tax-product_cat div.term-description {
+   * {
+      text-align: justify;
+   }
+}
+
+// Back Button
+.back_button {
+   position: absolute;
+   right: 0;
+   top: 0;
+}

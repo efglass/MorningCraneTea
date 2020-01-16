@@ -1,0 +1,198 @@
+/* Shopping Icons in Header */
+.header-icons > * > a {
+   transition: all 0.3s;
+
+   &:hover,
+   &:active,
+   &:focus {
+      transform: scale(1.5);
+      color: rgba($color-black, 0.6) !important;
+   }
+}
+
+/* Social Icons in Header */
+.icon-social {
+   a {
+      background: transparent !important;
+      color: rgba($color-black, 0.3) !important;
+      transition: all 0.3s;
+
+      &:hover, &:active, &:focus {
+         background: transparent !important;
+         color: rgba($color-black, 0.6) !important;
+         transform: scale(1.5);
+
+      }
+
+   }
+}
+
+.post-share.header-social {
+   margin: 1rem 2rem;
+}
+
+.post-footer {
+   position: relative;
+
+   .post-comments-number {
+      position: absolute;
+      top: 50%;
+      left: 2rem;
+      transform: translateY(-50%) scale(1.2);
+
+      &:hover,
+      &:focus {
+         text-decoration: underline;
+      }
+   }
+}
+
+/* slider arrow buttons */
+.featured-slider .slick-slider button.slick-arrow {
+   transition: box-shadow 300ms, transform 300ms, background-image 100ms;
+   border: none;
+   margin: -2.5rem 4rem 0 4rem;
+   transform: scale(1.5);
+
+   &:hover,
+   &:focus {
+      background-image: linear-gradient(to right bottom, rgba($color-grey-light, .2), rgba($color-black, .2));
+      box-shadow: 0 1rem 4rem rgba($color-black, .15);
+      transform: translateY(-.25rem) scale(1.6);
+   }
+
+   &:active {
+      background-image: none;
+
+      &::after {
+         @extend %btn-circle-hover-focus;
+      }
+   }
+
+   &::after {
+      @extend %btn-circle-default;
+      width: 8.5rem;
+      height: 8.5rem;
+      border: 4px solid rgba($color-black, .15);
+      transform: translateX(-50%) translateY(-50%) scale(0.4);
+   }
+}
+
+/* button on home slider */
+.featured-slider .featured-slider-content a.btn {
+   border-radius: 4px;
+   transition: all 300ms;
+
+   &:hover,
+   &:focus {
+      background-image: linear-gradient(to right bottom, rgba($color-grey-light, .2), rgba($color-black, .2));
+      box-shadow: 0 1rem 4rem rgba($color-black, .15);
+      transform: translateY(-.25rem) scale(1.1);
+   }
+}
+
+ul.slick-dots > * {
+   tab-index: "-1";
+}
+
+// back to top button
+.button-top {
+   position: fixed;
+   bottom: 3rem;
+   right: 3rem;
+   height: 4rem;
+   width: 4rem;
+   z-index: 100;
+   border: none;
+   border-radius: 50%;
+   margin: -2.5rem 4rem 0 4rem;
+   transform: scale(1.5);
+   background-image: linear-gradient(to right bottom, rgba($color-grey-light, .2), rgba($color-black, .2));
+   pointer-events: none;
+   opacity: 0;
+   transition: box-shadow 300ms, transform 300ms, background-image 100ms, opacity .18s ease;
+
+   i {
+      color: $color-grey-dark;
+      margin: auto;
+   }
+
+   &:hover,
+   &:focus {
+      box-shadow: 0 0 2rem rgba($color-black, .75);
+      transform: translateY(-.25rem) scale(1.6);
+   }
+
+   &:active {
+      background-image: none;
+
+      &::after {
+         @extend %btn-circle-hover-focus;
+      }
+   }
+
+   &::after {
+      @extend %btn-circle-default;
+      width: 8.5rem;
+      height: 8.5rem;
+      border: 4px solid rgba($color-black, .15);
+      transform: translateX(-50%) translateY(-50%) scale(0.4);
+   }
+
+   cursor: pointer;
+}
+
+.button-top-visible {
+   opacity: 1;
+   pointer-events: auto;
+}
+
+// back a page button
+.back_button {
+   position: fixed;
+   top: 40px;
+   color: $color-black;
+   border-bottom: 3px solid transparent;
+   font-size: calc(18px * 1.6);
+   font-weight: 600;
+   transition: all 300ms;
+   transform: translateZ(0);
+   backface-visibility: hidden;
+   overflow: hidden;
+
+   &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background: #000;
+      color: #000;
+      height: 3px;
+      transition: right 0.3s ease-out;
+   }
+
+   i.fa {
+      padding-right: 1rem;
+   }
+
+   &:hover {
+      color: $color-black;
+   }
+
+   &:hover::before,
+   &:focus::before {
+      right: 0;
+   }
+
+}
+
+// accordions for FAQ page
+.wp-block-ugb-accordion {
+   .faq-accordion {
+      ugb-accordion__heading {
+         padding: .5rem 3rem !important;
+      }
+   }
+}

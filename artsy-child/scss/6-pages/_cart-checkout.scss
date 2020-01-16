@@ -1,0 +1,26 @@
+@include maxpoint(phone) {
+   .woocommerce-cart,
+   .woocommerce-checkout  {
+      p.cart-checkout-p {
+      }
+      padding: 0 5%;
+   }
+}
+
+@include midpoint(phone-tablet){
+   .woocommerce-cart,
+   .woocommerce-checkout {
+      p.cart-checkout-p {
+         padding: 0 10%;
+      }
+   }
+}
+
+@include minpoint(desktop) {
+   .woocommerce-cart,
+   .woocommerce-checkout {
+      p.cart-checkout-p {
+         padding: 0 15%;
+      }
+   }
+}

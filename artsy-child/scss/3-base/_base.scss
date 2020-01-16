@@ -1,0 +1,14 @@
+html {
+   // defining 1rem from browser setting
+   font-size: 62.5%;
+}
+
+body {
+   box-sizing: border-box;
+   padding: 0 !important;
+}
+
+// general link color
+a, a:hover, a:focus{
+   color: #931f19;
+}

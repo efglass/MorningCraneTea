@@ -1,0 +1,67 @@
+/*
+   Primary Menu Link Animation
+*/
+
+%bracket-slide-default {
+   display: inline-block;
+   opacity: 0;
+   transition: transform 0.3s, opacity 0.2s;
+}
+
+%bracket-slide-hover-focus {
+   opacity: 1;
+   transform: translateX(0px);
+}
+.bracket-slide {
+
+   li a {
+      &::before {
+         @extend %bracket-slide-default;
+         margin-right: 1rem;
+         content: '[';
+         transform: translateX(2rem);
+      }
+      &::after {
+         @extend %bracket-slide-default;
+         margin-left: 1rem;
+         content: ']';
+         transform: translateX(-2rem);
+      }
+      &:hover,
+      &:focus {
+         &::before {
+            @extend %bracket-slide-hover-focus;
+         }
+         &::after {
+            @extend %bracket-slide-hover-focus;
+         }
+      }
+   }
+}
+
+.bracket-slide {
+   .current-menu-item a,
+   a.active {
+      transform: translateX(-.5rem);
+      &::before,
+      &::after {
+         opacity: 1;
+         margin-left: 1rem;
+         content: '[';
+         transform: translateX(0);
+      }
+      &::after {
+         content: ']';
+      }
+   }
+}
+
+header.header {
+   .primary-menu a{
+      height: 3.5rem;
+      line-height: 3.5rem;
+   }
+   .logo-wrapper a {
+      tab-index: "-1" !important;
+   }
+}

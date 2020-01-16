@@ -1,0 +1,204 @@
+{
+ "items": [
+  {
+  "kind": "webfonts#webfont",
+  "family": "Alegreya",
+  "category": "serif"
+  },
+  {
+  "kind": "webfonts#webfont",
+  "family": "Alegreya Sans",
+  "category": "sans-serif"
+  },
+  {
+  "kind": "webfonts#webfont",
+  "family": "Arimo",
+  "category": "sans-serif"
+  },
+  {
+  "kind": "webfonts#webfont",
+  "family": "Arvo",
+  "category": "serif"
+  },
+  {
+  "kind": "webfonts#webfont",
+  "family": "Bitter",
+  "category": "serif"
+  },
+  {
+  "kind": "webfonts#webfont",
+  "family": "Bree",
+  "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Cabin",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Crimson Text",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Domine",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Droid Sans",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Droid Serif",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Hind",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Karla",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Lato",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Libre Baskerville",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Lora",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Merriweather",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Merriweather Sans",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Montserrat",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Noto Sans",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Noto Serif",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Open Sans",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Oswald",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Oxygen",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Playfair Display",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Poppins",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "PT Sans",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "PT Serif",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Quattrocento",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Raleway",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Roboto",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Roboto Slab",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Rokkitt",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Rubik",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Source Sans Pro",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Source Serif Pro",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Titillium Web",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Ubuntu",
+   "category": "sans-serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Vollkorn",
+   "category": "serif"
+  },
+  {
+   "kind": "webfonts#webfont",
+   "family": "Work Sans",
+   "category": "sans-serif"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+// typography fix
+body {
+   font-weight: 400;
+   line-height: 1.5;
+   color: $color-grey-dark;
+   padding: 3rem;
+}
+
+// Site Title -- side header
+.title-wrapper a h1,
+.title-mobile a h1 {
+   text-align: center;
+   font-size: 3rem;
+   transform: translateZ(0);
+   backface-visibility: hidden;
+   position: relative;
+   overflow: hidden;
+
+   &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background: #000;
+      height: 3px;
+      transition: right 0.3s ease-out;
+   }
+
+   &:hover::before,
+   &:focus::before {
+      right: 0;
+   }
+}
+
+// Site Title -- mobile header
+.title-mobile {
+   position: relative;
+   width: 75%;
+   left: 50%;
+   transform: translateX(-50%);
+   height: 80px;
+   padding-top: .5rem;
+
+   a h1 {
+      padding-top: .5rem;
+      font-size: 2rem;
+      word-wrap: break-spaces;
+   }
+}
+
+// home slider
+.featured-slider-item {
+   .slider-title-main {
+      letter-spacing: 3px;
+      font-size: 6rem;
+   }
+
+   .slider-title-sub {
+      font-size: 3rem;
+      font-weight: 400;
+   }
+}
+
+@include maxpoint(tablet) {
+   .featured-slider-item {
+      .slider-title-main {
+         font-size: 4rem;
+         letter-spacing: 3px;
+         text-transform: capitalize;
+      }
+
+      .slider-title-sub {
+         font-size: 2rem;
+         font-weight: 400;
+         text-transform: capitalize;
+      }
+   }
+}
+
+@include maxpoint(phone) {
+
+   .featured-slider-item {
+      .slider-title-main {
+      }
+
+      font-size: 3.5rem;
+   }
+
+   .slider-title-sub {
+      font-size: 1.5rem;
+      font-weight: 400;
+   }
+}
+
+.entry-content.woocommerce-Tabs-panel {
+   font-size: 1.6rem;
+   line-height: 1.5;
+
+   h2 {
+      text-align: center;
+   }
+
+   p {
+      text-indent: 2rem;
+   }
+}
+.entry-content.woocommerce-Tabs-panel--steeping_tab {
+   h3 {
+      font-size: 1.5rem;
+      text-decoration: underline;
+      font-weight: 700;
+      text-align: center;
+   }
+
+   ol {
+      margin: 0;
+   }
+
+   ol li {
+      font-size: 1.5rem;
+      margin: .25rem 0;
+      list-style-type: none;
+      text-indent: -2em;
+      list-style-type: none;
+      counter-increment: item;
+
+      &::before {
+         display: inline-block;
+         width: 1em;
+         padding-right: 0.5em;
+         font-weight: 700;
+         text-align: right;
+         content: counter(item) ".";
+      }
+
+      ol li {
+         list-style-type: none;
+         font-size: 1.5rem;
+         margin: .25rem 0;
+
+         &::before {
+            display: inline-block;
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.4rem;
+            content: "\203a\00a0";
+         }
+      }
+   }
+}
+

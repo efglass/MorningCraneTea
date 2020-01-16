@@ -1,0 +1,48 @@
+/*
+Theme Name: Artsy Child
+Theme URI: http://demos.reveldev.com/artsy
+Author: Eric F. GLass
+Author URI: http://eric-glass.com
+Description: A Minimal Portfolio and Shop Theme
+Template: artsy-wp
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, featured-images, translation-ready
+Text Domain: artsy-child
+*/
+
+
+// 1-lib
+@import "1-lib/lib";
+@import "1-lib/pageable";
+// 2-variables
+@import "2-variables/functions";
+@import "2-variables/mixins";
+@import "2-variables/breakpoints";
+@import "2-variables/variables";
+@import "2-variables/placeholders";
+@import "2-variables/settings";
+// 3-base
+@import "3-base/base";
+@import "3-base/typography";
+// 4-modules
+@import "4-modules/product-gallery";
+@import "4-modules/buttons";
+// 5-layout
+@import "5-layout/layouts";
+@import "5-layout/main-nav";
+@import "5-layout/main-section";
+@import "5-layout/mobile-nav";
+@import "5-layout/site-footer";
+@import "5-layout/site-header";
+// 6-pages
+@import "6-pages/page-load";
+@import "6-pages/cart-checkout";
+@import "6-pages/home";
+@import "6-pages/blog";
+@import "6-pages/single-product";
+@import "6-pages/woo-catigory";
+
+
+

@@ -1,0 +1,148 @@
+/*
+   Single Product
+*/
+.woocommerce div.product {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+// min width: phone
+@include minpoint(phone) {
+   // gallery-column
+   .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+      max-width: 40rem;
+   }
+
+   //   description column
+   .summary.entry-summary {
+      width: calc(100% - 40rem);
+      float: left !important;
+      padding-left: 4rem;
+
+      & > * {
+         margin-top: 3rem;
+      }
+
+      .product_meta {
+         .sku_wrapper {
+            margin-bottom: .5rem;
+         }
+
+         a {
+            border-bottom: 2px solid transparent;
+            transition: all 100ms;
+         }
+
+         a:hover,
+         a:focus {
+            color: $color-black;
+            border-bottom: 2px solid rgba($color-black, .25);
+         }
+      }
+
+      form.cart {
+         button.single_add_to_cart_button.button {
+            background-color: transparent;
+            color: $color-black;
+            border-bottom: 3px solid transparent;
+            transition: all 300ms;
+
+            &.fa::before {
+               padding-right: 1rem;
+            }
+
+            &:hover,
+            &:focus {
+               transform: translateY(-0.3rem);
+               color: $color-black;
+               background-color: transparent;
+               border-bottom: 3px solid $color-black;
+               box-shadow: 0 1rem .5rem rgba($color-black, .02);
+               transform: translateY(-.25rem) scale(1.05);
+            }
+         }
+      }
+   }
+}
+
+//   add-to-cart button
+form.cart {
+   button.single_add_to_cart_button.button {
+      background-color: transparent;
+      color: $color-black;
+      border-bottom: 3px solid transparent;
+
+      &.fa::before {
+         padding-right: 1rem;
+      }
+   }
+}
+
+
+// Variable product buttons/labels
+.woocommerce div.product form.cart .variations {
+   margin-top: 1rem;
+   margin-bottom: -1rem;
+
+   tbody tr {
+      display: flex;
+      justify-content: flex-start;
+   }
+}
+
+.tawcvs-swatches .swatch {
+   color: #000;
+   width: 45px;
+   height: 45px;
+   line-height: 45px;
+   background-color: $color-grey-light;
+
+   &:hover,
+   &:focus {
+      box-shadow: 0 0 5px;
+      border-color: #999;
+      background-color: $color-white;
+   }
+}
+
+.woocommerce div.product form.cart .variations td.label {
+   display: inline-block;
+   padding-top: 10px;
+}
+
+
+// tab for reviews (widen)
+
+@include minpoint(tablet) {
+   .woocommerce-tabs.wc-tabs-wrapper {
+      & > * {
+         width: calc(100vw - 50rem);
+         padding: 0 5rem !important;
+      }
+      .woocommerce-Tabs-panel{
+         width: calc(100vw - 50%);
+         margin: 0 50% 2em !important;
+         transform: translateX(-50%);
+      }
+   }
+}
+@include maxpoint(tablet){
+   .woocommerce-tabs.wc-tabs-wrapper {
+      & > * {
+         width: 100vw;
+         padding: 0 5rem !important;
+      }
+   }
+   .woocommerce div.product .woocommerce-tabs ul.tabs li a{
+      text-align: center;
+   }
+}
+
+// remove FAQ accordian tab
+.woocommerce div.product .woocommerce-tabs.wc-tabs-wrapper {
+   #tab-accordions_faq,
+   #tab-title-accordions_faq{
+      display: none !important;
+   }
+}

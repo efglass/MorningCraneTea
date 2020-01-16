@@ -1,0 +1,116 @@
+%bracket-slide-default {
+   display: inline-block;
+   opacity: 0;
+   transition: transform 0.3s, opacity 0.2s;
+}
+
+%bracket-slide-hover-focus {
+   opacity: 1;
+   transform: translateX(0px);
+}
+
+
+nav.mobile-menu {
+   ul.menu {
+      display: flex;
+      flex-wrap: wrap;
+
+   }
+
+   li.menu-item {
+      flex: 1 1 50%;
+      border: 1px solid #f1f1f1;
+
+      a {
+         padding-left: 0;
+         text-align: center;
+      }
+   }
+
+}
+
+%bracket-slide-default {
+   display: inline-block;
+   opacity: 0;
+   transition: transform 0.3s, opacity 0.2s;
+}
+
+%bracket-slide-hover-focus {
+   opacity: 1;
+   transform: translateX(0px);
+}
+
+.bracket-mobile {
+   a {
+      &::before {
+         @extend %bracket-slide-default;
+         margin-right: 1rem;
+         content: '[';
+         transform: translateX(2rem);
+      }
+
+      &::after {
+         @extend %bracket-slide-default;
+         margin-left: 1rem;
+         content: ']';
+         transform: translateX(-2rem);
+      }
+
+      &:hover,
+      &:focus {
+         &::before {
+            @extend %bracket-slide-hover-focus;
+         }
+
+         &::after {
+            @extend %bracket-slide-hover-focus;
+         }
+      }
+   }
+}
+
+.bracket-mobile {
+   .current-menu-item a,
+   a.active {
+      transform: translateX(-.5rem);
+
+      &::before,
+      &::after {
+         opacity: 1;
+         margin-left: 1rem;
+         content: '[';
+         transform: translateX(0);
+      }
+
+      &::after {
+         content: ']';
+      }
+   }
+}
+
+// increase size of mobile header to 100px
+.header-mobile,
+.header-mobile .logo-wrapper a,
+.header-mobile .toggle-button-bars,
+.header-mobile .header-mobile-icons {
+}
+
+.header-mobile .toggle-button-bars{
+   transform: translateY(1.25rem);
+}
+
+
+.header-mobile .header-mobile-icons {
+   padding-top: 1.25rem !important;
+}
+
+// mobile social icons bar
+.header-mobile .title-mobile .header-mobile-social{
+   display: flex;
+   justify-content: center;
+   flex-wrap: nowrap;
+   .icon-social{
+      padding: 0 8px;
+      margin-top: -12px;
+   }
+}

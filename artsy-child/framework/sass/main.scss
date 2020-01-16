@@ -1,0 +1,266 @@
+/*
+Theme Name: Artsy Child
+Theme URI: http://demos.reveldev.com/artsy
+Author: reveldev
+Author URI: http://reveldev.com
+Description: A Minimal Portfolio and Shop Theme
+Template: artsy-wp
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, featured-images, translation-ready
+Text Domain: artsy-child
+*/
+
+/*
+ Colors:
+ beige      #f3dfbb
+ brown/red  #631111
+
+*/
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-grey-1: #AFAFAF;
+
+html {
+   // defining 1rem from browser setting
+   font-size: 62.5%;
+}
+
+body {
+   box-sizing: border-box;
+}
+
+header.header {
+   width: 25rem;
+   overflow-y: hidden;
+   box-shadow: 0 0 4rem rgba($color-black, .2);
+}
+
+@media screen and (min-width: 991px) {
+   #wrapper {
+      padding-left: 25rem;
+   }
+}
+
+@media screen and (max-width: 991px) {
+   #wrapper {
+      padding: 0
+   }
+}
+
+.slide-to-store,
+.home-slide {
+   background-image: linear-gradient(to right bottom, rgba($color-white, .85), rgba($color-black, .85)), url("framework/img/SKorea2011_Frank_0139.jpg");
+   width: 110rem;
+   position: relative;
+   left: -330rem;
+   top: 0;
+   z-index: 998;
+   opacity: 0;
+   transition: opacity 2s ease-in-out 1s;
+
+   .slider-title-main {
+      letter-spacing: 3px;
+      text-transform: capitalize;
+      display: block;
+      font-size: 6rem;
+   }
+
+   .slider-title-sub {
+      display: block;
+      text-transform: capitalize;
+      font-size: 3rem;
+      font-weight: 400;
+   }
+}
+
+@media screen and (max-width: 991px) {
+   .slide-to-store {
+      .slider-title-main {
+         display: block;
+         font-size: 4rem;
+      }
+
+      .slider-title-sub {
+         display: block;
+         font-size: 2rem;
+         font-weight: 400;
+      }
+   }
+}
+
+@media screen and (max-width: 540px) {
+   .slider-title-main {
+      display: block;
+      font-size: 3.5rem;
+   }
+
+   .slider-title-sub {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 400;
+   }
+}
+
+/*
+   Primary Menu Link Animation
+*/
+
+%bracket-slide-default {
+   display: inline-block;
+   opacity: 0;
+   transition: transform 0.3s, opacity 0.2s;
+}
+
+%bracket-slide-hover-focus {
+   opacity: 1;
+   transform: translateX(0px);
+}
+
+.bracket-slide {
+   a {
+      &::before {
+         @extend %bracket-slide-default;
+         margin-right: 1rem;
+         content: '[';
+         transform: translateX(2rem);
+      }
+      &::after {
+         @extend %bracket-slide-default;
+         margin-left: 1rem;
+         content: ']';
+         transform: translateX(-2rem);
+      }
+      &:hover,
+      &:focus {
+         &::before {
+            @extend %bracket-slide-hover-focus;
+         }
+         &::after {
+            @extend %bracket-slide-hover-focus;
+         }
+      }
+   }
+}
+
+.bracket-slide {
+   .current-menu-item a,
+   a.active {
+      transform: translateX(-.5rem);
+      &::before,
+      &::after {
+         opacity: 1;
+         margin-left: 1rem;
+         content: '[';
+         transform: translateX(0);
+      }
+      &::after {
+         content: ']';
+      }
+   }
+}
+
+/*
+   Header Shopping Icon Animation
+*/
+%btn-circle-default {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 10rem;
+   height: 10rem;
+   border: 4px solid rgba($color-black, 0.2);
+   border-radius: 50%;
+   content: '';
+   opacity: 0;
+   transition: transform 0.3s, opacity 0.3s;
+   transform: translateX(-50%) translateY(-50%) scale(0.01);
+}
+
+%btn-circle-hover-focus {
+   opacity: 1;
+   transform: translateX(-50%) translateY(-50%) scale(.6);
+}
+
+.icon-hover-circle {
+   &::before {
+      @extend %btn-circle-default;
+   }
+   &::after {
+      content: "";
+      @extend %btn-circle-default;
+      width: 8.5rem;
+      height: 8.5rem;
+      border-width: 10px;
+      transform: translateX(-50%) translateY(-50%) scale(0.4);
+   }
+   &:hover,
+   &:focus {
+      &::before, &::after {
+         @extend %btn-circle-hover-focus;
+      }
+   }
+}
+
+/*
+   Header Social Icon Animation
+*/
+.header .header-social .icon-social {
+   a {
+      background: transparent;
+      color: rgba($color-black, 0.5);
+      &:hover, &:active {
+         background: transparent;
+         &::before, &:after {
+            @extend %btn-circle-hover-focus;
+         }
+      }
+      &::before {
+         @extend %btn-circle-default;
+         border-color: rgba($color-black, .5);
+
+      }
+      &::after {
+         @extend %btn-circle-default;
+         width: 8.5rem;
+         height: 8.5rem;
+         border: 10px solid rgba($color-black, .5);
+         transform: translateX(-50%) translateY(-50%) scale(0.4);
+      }
+   }
+}
+
+/*
+   slider arrow buttons
+*/
+
+
+
+/*
+   WooCommerce
+*/
+
+/*
+   Single Product
+*/
+@media screen and (min-width: 991px) {
+   // gallery-column
+   .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+      max-width: 40rem;
+   }
+
+   // description column
+   .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+      width: calc(100% - 40rem);
+      padding-left: 40px;
+   }
+}
+
+// add-to-cart button
+button.single_add_to_cart_button.button {
+   &.fa::before {
+      padding-right: 1rem;
+   }
+}

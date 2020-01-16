@@ -1,0 +1,14 @@
+@include minpoint(tablet) {
+   #wrapper {
+      padding-left: 30rem;
+   }
+}
+
+@include maxpoint(tablet) {
+   #wrapper {
+      padding: 0 2rem;
+   }
+}
+
+
+

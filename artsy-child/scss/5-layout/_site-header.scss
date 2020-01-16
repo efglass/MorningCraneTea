@@ -1,0 +1,20 @@
+header.header {
+   width: 30rem;
+   overflow-y: auto;
+   box-shadow: 0 0 4rem rgba($color-black, .2);
+
+   .logo-wrapper {
+      margin: 0 auto;
+   }
+   div.header-icons,
+   div.header-social {
+      margin: 10px 20px;
+   }
+   div.header-social .icon-social{
+      font-size: 2rem;
+   }
+   div.header-copyright{
+      margin: 20px 20px;
+   }
+}
+

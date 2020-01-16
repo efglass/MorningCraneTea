@@ -1,0 +1,176 @@
+.blog h1.blog-title {
+   font-size: 4.5rem;
+   font-weight: 700;
+   text-transform: capitalize;
+   text-decoration: underline;
+   text-align: center;
+   margin-bottom: 4rem;
+}
+
+article.post-grid-item {
+   border-radius: 5px;
+}
+
+div.post-thumbnail {
+   display: inline-block;
+   position: relative;
+   background: none;
+   border: none;
+   color: #000;
+   cursor: pointer;
+   background: transparent;
+
+   a {
+      display: block;
+   }
+}
+
+.blog main .post-thumbnail {
+   &::before,
+   &::after {
+      content: "";
+      width: 0;
+      height: 5px;
+      position: absolute;
+      transition: all 0.2s linear;
+      background: $color-black;
+   }
+
+   img.wp-post-image {
+      &::before,
+      &::after {
+         content: "";
+         width: 5px;
+         height: 0;
+         position: absolute;
+         transition: all 0.2s linear;
+         background: $color-black;
+      }
+   }
+
+   &:hover::before,
+   &:hover::after {
+      width: 100%;
+   }
+
+   &:hover {
+      article.post-item::before,
+      article.post-item::after {
+         height: 100%;
+      }
+   }
+}
+
+
+.blog main .post-thumbnail {
+
+   &::before {
+      right: 0;
+      top: 0;
+      transition-delay: 0s;
+   }
+
+   &::after {
+      left: 0;
+      bottom: 0;
+      transition-delay: 0s;
+   }
+
+   &:hover::before,
+   &:hover::after {
+      transition-delay: 0.2s;
+   }
+
+   img.wp-post-image {
+
+      &::before {
+         left: 0;
+         top: 0;
+         transition-delay: 0.2s;
+      }
+
+      &::after {
+         right: 0;
+         bottom: 0;
+         transition-delay: 0.2s;
+      }
+
+      &:hover img.wp-post-image::before,
+      &:hover img.wp-post-image::after {
+         transition-delay: 0s;
+      }
+   }
+}
+
+.page {
+   h1.post-title {
+      font-size: 3.5rem;
+      text-transform: capitalize;
+      text-decoration: underline;
+      text-align: center;
+   }
+
+   input,
+   textarea {
+      border: 1px solid rgba($color-grey-dark, .45);
+      line-height: 4rem;
+   }
+}
+
+.blog h2.post-title {
+   font-size: 2rem;
+   text-decoration: underline;
+   padding: 0 .8rem;
+   text-transform: capitalize;
+   transition: all 500ms;
+
+
+   .h5 {
+      font-size: 2rem;
+   }
+}
+
+.single-post .wp-post-image {
+   display: none;
+}
+
+.post-entry {
+   h1 {
+      font-size: 2rem;
+      font-weight: 700;
+   }
+
+   blockquote {
+      font-size: 1.4rem;
+      text-indent: 2.5rem;
+      padding-left: 1rem;
+      margin: 0 2rem;
+      text-align: justify;
+      color: rgba($color-black, .45);
+   }
+
+   a {
+
+      color: $color-blue-dark;
+      font-style: italic;
+      font-weight: 600;
+      text-transform: capitalize;
+
+   }
+
+   .wp-caption a {
+      &::before,
+      &::after {
+         content: none;
+      }
+   }
+   .wp-caption img{
+      margin: 0 auto;
+   }
+   p.wp-caption-text {
+      font-size: 1.8rem;
+      text-decoration: underline;
+   }
+}
+
+
